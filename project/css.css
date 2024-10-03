@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.page{
+    height: 230vh;
+    width: 100%;
+}
+.header{
+   background: url(img1\ \(2\).jpg);
+   height: 100vh;
+   width: 100%;
+   background-size: 100%;
+}
+.p{
+    color: white;   
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+}
+.header-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 250px 150px;
+}
+.header-text h3{
+    font-size: 30px;
+    color: grey;
+}
+.header-text h1{
+    font-size: 70px;
+}
+.header-text p{
+    font-size: 15px;
+    color: rgb(214, 211, 211);
+}
+.main{
+    height:100vh;
+    width: 100%;
+}
+.main{ 
+   
+    justify-content: space-between ; 
+}
+.main-text{
+    display: flex;
+    justify-content: flex-start;
+    padding: 70px 1px 1px 300px;
+     display: flex;
+    flex-direction: row;
+}
+.main-text-p{
+    font-size: 15px;
+    padding: 7px 40px;
+    color: gray;
+}
+.main-photo{
+    background: url(img21\ \(1\).jpg);
+    height: 373px;
+    width: 500px;
+    background-size: contain;
+    position: absolute;
+    margin: 40px 20px 10px 290px;
+}
+.photos{
+    height: 380px;
+    width: 500px;
+    background-size: contain;
+ 
+
+}
+.f{
+    background: url(img22\ \(1\).jpg);
+    height: 240px;
+    width: 400px;
+    margin: 39px 20px 10px 800px;
+    position: absolute;
+}
+.s{
+    background: url(img23\ \(1\).jpg);
+    height: 240px;
+    width: 400px;
+    margin: 290px 20px 10px 800px;
+    position: absolute;
+}
+.footer{
+    height: 30vh;
+    width: 100%;
+    background: url(img3\ \(1\).jpg); 
+    background-size: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer h3{
+    border: 2px solid white;
+}
