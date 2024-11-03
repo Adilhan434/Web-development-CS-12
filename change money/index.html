@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют</title>
+</head>
+<body>
+    <h1>Конвертер валют</h1>
+    <input type="number" id="amount" placeholder="Сумма" />
+    <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+    </select>
+    <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+    </select>
+    <button onclick="convert()">Конвертировать</button>
+    <h2 id="result"></h2>
+
+    <script>
+        const rates = {
+            USD: 1.0,  // Базовая валюта
+            EUR: 0.85,
+            RUB: 74.0,
+        };
+
+        function convert() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById('result').innerText = "Ошибка: введите корректную сумму.";
+                return;
+            }
+
+            if (!rates[fromCurrency] || !rates[toCurrency]) {
+                document.getElementById('result').innerText = "Ошибка: неверная валюта.";
+                return;
+            }
+
+            const convertedAmount = (amount * (rates[toCurrency] / rates[fromCurrency])).toFixed(2);
+            document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+        }
+    </script>
+</body>
+</html>

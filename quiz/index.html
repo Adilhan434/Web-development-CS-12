@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Q1. adilhan + adilhan? <br>
+  <input type="radio" name="question1">aktan <br>
+  <input type="radio" name="question1">iliyar <br>
+  <input type="radio" name="question1" id="correct1">2adilhan <br>
+  <input type="radio" name="question1">anvar <br><br><br>
+
+  Q2. eye + eye?<br>
+  <input type="radio" name="question2" id="correct2">double eye<br>
+  <input type="radio" name="question2">nose<br>
+  <input type="radio" name="question2">mouth<br>
+  <input type="radio" name="question2">ear<br><br><br>
+
+
+  Q3. How many points does Adilhan deserve?(please)<br>
+    <input type="radio" name="question3" id="correct3">100<br>
+    <input type="radio" name="question3" id="correct3">100<br>
+    <input type="radio" name="questionid3" id="correct3">100<br>
+    <input type="radio" name="question3" id="correct3">100<br>
+
+<button type="submit" name="submit" value="submitQuiz" onclick="result()">submit</button>
+ 
+    <script>
+        function result(){
+            let score = 0
+            if(document.getElementById('correct1').checked){
+                score+=10;
+            }
+            if(document.getElementById('correct2').checked){
+                score+=10;
+            }
+            if(document.getElementById('correct3').checked){
+                score+=10;
+            }
+            alert('Your score is '+ score)
+        }
+    </script>
+
+</body>
+</html>
